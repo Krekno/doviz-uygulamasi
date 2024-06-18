@@ -30,6 +30,13 @@ def get_historical(date):
 def get_date(epoch):
 	return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(epoch))
 
+cursor.execute("SELECT * FROM log WHERE date = ?", (get_date(live["timestamp"],)))
+if cursor.fetchone():
+	pass
+else:
+	for key in live["quotes"].keys():
+		cursor.execute("INSERT INTO log VALUES (?, ?, ?, ?)", (key[3:], table[key[3:]], live["quotes"][key], get_date(live["timestamp"])))
+
 root = tk.Tk()
 root.title("Döviz Uygulaması")
 
