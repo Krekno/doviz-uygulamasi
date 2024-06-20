@@ -1,2 +1,0 @@
-# doviz-uygulamas-
-asdasd
