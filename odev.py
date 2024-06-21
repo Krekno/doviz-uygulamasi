@@ -200,7 +200,6 @@ def display_graph():
         sum_values += row[1]
         values.append(sum_values)
 
-    # Plot the data
     plt.figure(figsize=(10, 5))
     plt.plot(dates, values, marker='o', linestyle='-', color='b')
     plt.xlabel('Tarih')
