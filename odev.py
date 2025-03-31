@@ -7,7 +7,7 @@ import datetime
 from statistics import mean
 import matplotlib.pyplot as plt
 
-api_key = "3c3cbe4c167f3f72fb75ff4332285eeb"
+api_key = "API_KEY"
 url_live = f"http://api.currencylayer.com/live?access_key={api_key}&source=TRY"
 
 live = requests.get(url_live).json()
